@@ -27,3 +27,18 @@ export async function fetchSearchJson<Response = any>(type:string, url: string, 
 
   return response.json()
 }
+
+export async function fetchNameTitle<Response = any>(url: string, init?: RequestInit): Promise<Response> {
+  const response = await fetch(
+    `${url}`,
+    {
+      ...init ?? {},
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      }
+    })
+
+
+  return response.json()
+}

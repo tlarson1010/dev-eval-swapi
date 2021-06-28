@@ -3,8 +3,7 @@ import {Grid} from 'semantic-ui-react'
 import { fetchJson } from '../../api'
 import { PersonType } from '../../types'
 import Person from '../Person'
-import { render } from '@testing-library/react'
-import App from '../App'
+
 
 
 function People() {

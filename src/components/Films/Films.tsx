@@ -37,7 +37,6 @@ function createId(counter: number, newId: string, films: FilmType[])
       newId = films[counter].url.substr(-3).replace('/','')
     }
     films[counter].id = parseInt(newId)
-    console.log(films[counter].id)
     counter++;
   }
 

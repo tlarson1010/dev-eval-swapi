@@ -13,7 +13,7 @@ function Film({ film }: FilmProps) {
                   <Card.Description>
                     <strong>Release Date</strong>
                     <p>{film.release_date}</p>
-                    <strong>Oppening Crawl</strong>
+                    <strong>Opening Crawl</strong>
                     <p>{film.opening_crawl}</p>
                   </Card.Description>
                 </Card.Content>

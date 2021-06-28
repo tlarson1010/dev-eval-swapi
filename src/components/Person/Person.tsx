@@ -1,6 +1,7 @@
 import { PersonType } from '../../types';
 import {Card, Grid} from 'semantic-ui-react';
-import Films from '../Films'
+
+
 
 
 interface PersonProps {
@@ -11,7 +12,6 @@ interface PersonProps {
 //I'm returning 10 grids instead of 10 cards inside of one grid.
 function Person({ person }: PersonProps) {
    return <Grid.Column key={person.id}>
-            {console.log(person.id)}
             <Card>
               <Card.Content>
               <Card.Header>{person.name}</Card.Header>
@@ -22,22 +22,20 @@ function Person({ person }: PersonProps) {
                 <p>{person.mass}</p>
                 <strong>Hair Color</strong>
                 <p>{person.hair_color}</p>
-                <strong>Films</strong>
+                <strong>Appears in the following Films:</strong>
                 <p>{pullFilmName(person.films)}</p>
                 <strong>Species</strong>
                 <p>{person.species}</p> 
                 </Card.Description>
               </Card.Content>
           </Card>
-          </Grid.Column>
-          
+          </Grid.Column>       
 } 
 
 //messy way to return the film title within the people card.
 function pullFilmName(films:Array<string>)
 {
   let counter = 0
-  console.log(films[0])
   while(counter < films.length)
   {
     if(films[counter] === 'https://swapi.dev/api/films/1/')
@@ -69,11 +67,5 @@ function pullFilmName(films:Array<string>)
   return films
   
 }
-
-
-  
-
-         
-
 
 export default Person

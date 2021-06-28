@@ -37,7 +37,6 @@ function createId(counter: number, newId: string, planets: PlanetType[])
       newId = planets[counter].url.substr(-3).replace('/','')
     }
     planets[counter].id = parseInt(newId)
-    console.log(planets[counter].id)
     counter++;
   }
 
